@@ -5,3 +5,5 @@ ports:
   - port: 6080
     onOpen: open-browser
     visibility: private
+  - port: 5900
+    visibility: private
