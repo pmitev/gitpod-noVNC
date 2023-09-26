@@ -1,2 +1,7 @@
 image: 
   file: .gitpod.dockerfile
+
+ports:
+  - port: 6080
+    onOpen: open-browser
+    visibility: private
