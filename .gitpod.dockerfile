@@ -1,5 +1,7 @@
 FROM gitpod/workspace-full-vnc
 
+ARG DEBIAN_FRONTEND=noninteractive
+
 RUN sudo apt-get update && \
     sudo apt-get install -y \
     mc dos2unix
