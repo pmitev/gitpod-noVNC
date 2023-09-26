@@ -7,3 +7,4 @@ ports:
     visibility: private
   - port: 5900
     visibility: private
+    onOpen: ignore
