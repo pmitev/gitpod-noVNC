@@ -1,10 +1,15 @@
-image: 
-  file: .gitpod.dockerfile
+image: gitpod/workspace-full-vnc
+
+tasks:
+  - name: Apptainer
+    init: |
+      sudo apt-get update && sudo apt-get install -y mc dos2unix
+      wget https://github.com/apptainer/apptainer/releases/download/v1.2.3/apptainer_1.2.3_amd64.deb && sudo apt install -y ./apptainer_1.2.3_amd64.deb
 
 ports:
   - port: 6080
-    onOpen: open-preview
     visibility: private
+    onOpen: ignore
   - port: 5900
     visibility: private
     onOpen: ignore
